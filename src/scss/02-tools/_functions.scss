@@ -1,0 +1,23 @@
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+@function font-weight($font-weight-name) {
+  @return map-get($font-weight, $font-weight-name);
+}
+
+@function transition($transition-param) {
+  @return map-get($transitions, $transition-param);
+}
+
+@function px-to-em($pixels, $base: 16) {
+  $em-size: $pixels / $base;
+
+  @return #{$em-size}em;
+}
+
+@function px-to-rem($pixels, $base: 16) {
+  $rem-size: $pixels / $base;
+
+  @return #{$rem-size}rem;
+}

@@ -1,0 +1,25 @@
+$transitions: (
+  duration-01: 0.1s,
+  duration-02: 0.2s,
+  duration-03: 0.3s,
+  duration-04: 0.4s,
+  duration-05: 0.5s,
+  duration-06: 0.6s,
+  duration-07: 0.7s,
+  duration-08: 0.8s,
+  duration-09: 0.9s,
+  timing: cubic-bezier(0.77, 0, 0.175, 1),
+  delay: 0.2s
+);
+
+$transitions: map-merge(
+  $transitions,
+  (
+    fast-duration: map-get($transitions, duration-01),
+    fast: map-get($transitions, duration-01) map-get($transitions, timing),
+    normal-duration: map-get($transitions, duration-03),
+    normal: map-get($transitions, duration-03) map-get($transitions, timing),
+    slow-duration: map-get($transitions, duration-05),
+    slow: map-get($transitions, duration-05) map-get($transitions, timing)
+  )
+);
