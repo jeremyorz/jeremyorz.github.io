@@ -1,5 +1,0 @@
-@each $color-name, $color-hex in $colors {
-  .u-bg--#{$color-name} {
-    background-color: $color-hex;
-  }
-}
