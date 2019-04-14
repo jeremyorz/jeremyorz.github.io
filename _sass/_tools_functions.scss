@@ -1,0 +1,28 @@
+@function em($pixels, $base: $base-font-size) {
+  @return #{$pixels / $base}em;
+}
+
+@function rem($pixels, $base: $base-font-size) {
+  @return #{$pixels / $base}rem;
+}
+
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+@function transition($transition-param) {
+  @return map-get($transitions, $transition-param);
+}
+
+@function z($z-index-param) {
+  @return map-get($z-index, $z-index-param);
+}
+
+@function space($space-param) {
+  @return map-get($spaces, $space-param);
+}
+
+@function container($container-param) {
+  @return map-get($containers, $container-param);
+}

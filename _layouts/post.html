@@ -3,6 +3,18 @@ layout: default
 ---
 
 <h1>{{ page.title }}</h1>
+
 <p class="meta">{{ page.date | date_to_string }}</p>
 
-<div class="post">{{ content }}</div>
+<p>{{ page.categories }}</p>
+
+{% if page.image != nil and page.image != "" %}
+<div class="">
+  <img
+    src="{{ site.baseurl }}/assets/img/{{ page.image }}"
+    alt="{{ page.title }}"
+  />
+</div>
+{% endif %}
+
+<div class="post" class="p-post">{{ content }}</div>
